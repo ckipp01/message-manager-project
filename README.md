@@ -1,4 +1,4 @@
-# message manager coding-project
+# message manager coding project
 
  Coding project for Chris Kipp
 
