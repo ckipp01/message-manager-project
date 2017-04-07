@@ -1,6 +1,6 @@
-# kipsu-coding-project
+# coding-project
 
-> Kipsu coding project
+>  coding project
 
 ## Build Setup
 
