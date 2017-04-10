@@ -53,9 +53,9 @@
 <script>
 import Companies from './assets/Companies.json'
 import Guests from './assets/Guests.json'
-const moment = require('moment')
-const tz = require('moment-timezone')
-moment.tz.add('US/Western|PST PDT|80 70|0101|1Lzm0 1zb0 Op0')
+const moment = require('moment');
+const tz = require('moment-timezone');
+moment.tz.add('US/Western|PST PDT|80 70|0101|1Lzm0 1zb0 Op0');
 
 export default {
   name: 'app',
