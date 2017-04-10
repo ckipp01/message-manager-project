@@ -82,15 +82,15 @@ export default {
   },
   methods: {
     sendMessage() {
-      if (this.guest != '') {
+      if (this.guest !== '') {
           this.setGreetings();
       }
-      if (this.message == 'Check In' && this.company != null && this.guest != null) {
+      if (this.message === 'Check In' && this.company !== null && this.guest !== null) {
           this.$message({
             message: this.checkInGreeting + this.guest.firstName + ', and welcome to ' + this.company.company + '! Room ' + this.guest.reservation.roomNumber + ' is now ready you. Enjoy your stay, and let us know if you need anything.',
             type: 'success'
           });
-      } else if (this.message == 'Check Out' && this.company != null && this.guest != null) {
+      } else if (this.message === 'Check Out' && this.company !== null && this.guest !== null) {
           this.$message({
             message: this.checkOutGreeting + this.guest.firstName + ', and thank you for staying at ' + this.company.company + '! We hope your stay in Room ' + this.guest.reservation.roomNumber + ' was pleasant, and we hope to see you again.',
             type: 'success'
@@ -116,10 +116,10 @@ export default {
           this.checkOutGreeting = 'Good morning ';
       } else if (moment.tz(this.guest.reservation.endTimestamp,this.company.timezone).format("HH") >= 12 && moment.tz(this.guest.reservation.endTimestamp,this.company.timezone).format("HH") < 17) {
           this.checkOutGreeting = 'Good afternoon ';
-      } else if (moment.tz(this.guest.reservation.endTimestamp,this.company.timezone).format("HH") >= 17 && moment.tz(this.guest.reservationendTimestamp,this.company.timezone).format("HH") < 24) {
+      } else if (moment.tz(this.guest.reservation.endTimestamp,this.company.timezone).format("HH") >= 17 && moment.tz(this.guest.reservation.endTimestamp,this.company.timezone).format("HH") < 24) {
           this.checkOutGreeting = 'Good evening ';
       } else {
-        this.check
+        this.checkOutGreeting = 'Hello';
       }
     }
   }
